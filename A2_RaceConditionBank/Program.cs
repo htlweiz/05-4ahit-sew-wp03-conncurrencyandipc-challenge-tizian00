@@ -18,7 +18,10 @@ class Program
         {
             threads[i] = new Thread(() => PerformBankOperations(account));
             threads[i].Start();
-            threads[i].Join();
+        }
+        foreach(var thread in threads)
+        {
+            thread.Join();
         }
 
     }
