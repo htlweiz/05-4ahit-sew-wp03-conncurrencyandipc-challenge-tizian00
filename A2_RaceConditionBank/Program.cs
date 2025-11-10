@@ -30,7 +30,7 @@ class Program
     {
         account.Deposit(100);
         Console.WriteLine($"Kontostand: {account.GetBalance()}");
-        Thread.Sleep(10);
+        Thread.Sleep(100);
         account.Withdraw(150);
         Console.WriteLine($"Kontostand: {account.GetBalance()}");
     }
