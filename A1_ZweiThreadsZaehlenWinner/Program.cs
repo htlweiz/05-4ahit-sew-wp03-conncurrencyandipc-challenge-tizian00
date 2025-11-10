@@ -19,6 +19,14 @@ class Program
         threadB.Start();
         threadA.Join();
         threadB.Join();
+        if (threadACount > threadBCount)
+        {
+            Console.WriteLine("Thread A hat gewonnen!");
+        }
+        else if (threadBCount < threadACount)
+        {
+            Console.WriteLine("Thread B hat gewonnen!");
+        }
         Console.WriteLine("Fertig");
         
     }
